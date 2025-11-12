@@ -23,5 +23,7 @@ dev_dependencies:
   leak_tracker_flutter_testing: any
   flutter_lints: ^3.0.1
 
+assets:
+  - assets/
 flutter:
   generate: true

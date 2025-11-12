@@ -1,6 +1,7 @@
 import 'package:circle_flags/circle_flags.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_country_selector/flutter_country_selector.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 @Deprecated('Use [CountryButton] instead')
 typedef CountryChip = CountryButton;
@@ -65,10 +66,19 @@ class CountryButton extends StatelessWidget {
               ExcludeSemantics(
                 child: GrayScale(
                   visible: !enabled,
-                  child: CircleFlag(
-                    isoCode.name,
-                    size: flagSize,
-                  ),
+                  child: isoCode.name == "sy"
+                      ? ClipOval(
+                          child: SvgPicture.asset(
+                            'assets/sy.svg',
+                            width: flagSize,
+                            height: flagSize,
+                            fit: BoxFit.cover,
+                          ),
+                        )
+                      : CircleFlag(
+                          isoCode.name,
+                          size: flagSize,
+                        ),
                 ),
               ),
               const SizedBox(width: 8),
