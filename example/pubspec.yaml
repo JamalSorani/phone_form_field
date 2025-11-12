@@ -15,6 +15,7 @@ dependencies:
 
   flutter_localizations: # Add this line
     sdk: flutter
+  flutter_svg: ^2.2.2
 
 dev_dependencies:
   flutter_test:
