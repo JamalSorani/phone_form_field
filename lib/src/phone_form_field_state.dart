@@ -100,6 +100,7 @@ class PhoneFormFieldState extends FormFieldState<PhoneNumber> {
       enabled: widget.enabled,
       inputDecoration: widget.decoration,
       child: TextField(
+        textDirection: TextDirection.ltr,
         decoration: widget.decoration.copyWith(
           errorText: errorText,
           prefix: countryButtonForEachSlot[_CountryButtonSlot.prefix],
