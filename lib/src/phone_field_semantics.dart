@@ -37,6 +37,7 @@ class PhoneFieldSemantics extends StatelessWidget {
       focusable: true,
       focused: hasFocus,
       enabled: enabled,
+      textDirection: TextDirection.ltr,
       child: ExcludeSemantics(
         child: child,
       ),
